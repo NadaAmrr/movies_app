@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movies/features/tabs/widgets/popular_widget.dart';
+import 'package:movies/features/tabs/widgets/recommended_widget.dart';
 import 'widgets/release_widget.dart';
 
 class HomeTab extends StatelessWidget {
@@ -11,7 +13,7 @@ class HomeTab extends StatelessWidget {
       child: Column(
         children: [
           /// Popular
-          // PopularViewWidget(),
+          const PopularWidget(),
           SizedBox(
             height: 24.h,
           ),
@@ -21,7 +23,7 @@ class HomeTab extends StatelessWidget {
             height:24.h ,
           ),
           /// Top Rated - Recommended
-          const ReleaseWidget(),
+           const RecommendedWidget(),
         ],
       ),
     );

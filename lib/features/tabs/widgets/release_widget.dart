@@ -20,6 +20,9 @@ class ReleaseWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
+          SizedBox(
+            height: 15.h,
+          ),
           /// Release text
           Text(
             AppStrings.release,
@@ -42,8 +45,8 @@ class ReleaseWidget extends StatelessWidget {
                   return const Text(
                       textAlign: TextAlign.center, AppStrings.error);
                 }
-                var releaseResults = snapshot.data?.results ?? [];
-                if (releaseResults.isEmpty) {
+                var results = snapshot.data?.results ?? [];
+                if (results.isEmpty) {
                   return const Text(
                       textAlign: TextAlign.center, AppStrings.empty);
                 }
@@ -58,19 +61,19 @@ class ReleaseWidget extends StatelessWidget {
                               context,
                               AppRoutes.onGenerate(RouteSettings(
                                   name: RoutesName.detailsScreen,
-                                  arguments: releaseResults[index].id)));
+                                  arguments: results[index].id)));
                         },
                         child: SizedBox(
                           width: 96.87.w,
                           child: MovieSelectItemWidget(
                             movieImage:
-                                releaseResults[index].backdropPath ?? "",
+                                results[index].backdropPath ?? "",
                             isSelected: true,
                           ),
                         ),
                       );
                     },
-                    itemCount: releaseResults.length,
+                    itemCount: results.length,
                     separatorBuilder: (BuildContext context, int index) {
                       return const SizedBox(
                         width: 14,

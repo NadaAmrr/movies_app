@@ -18,6 +18,7 @@ class MovieSelectItemWidget extends StatelessWidget {
       movieImage = AppImages.baseUrl + movieImage;
     }
     return SizedBox(
+      height: 127.74.h,
       child: Stack(
         children: [
           Container(
@@ -28,7 +29,7 @@ class MovieSelectItemWidget extends StatelessWidget {
             ),
           ),
           SvgPicture.asset(
-            isSelected ? AppImages.iconBrowser : AppImages.iconUnBookmark,
+            isSelected ? AppImages.iconBookmark : AppImages.iconUnBookmark,
             width: 27.w,
             height: 36.h,
           ),
