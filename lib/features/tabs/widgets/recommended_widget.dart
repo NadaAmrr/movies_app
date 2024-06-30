@@ -65,7 +65,7 @@ class RecommendedWidget extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        width: 96.87.w,
+                        width: 100.w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
                           color: Colors.grey.shade800,

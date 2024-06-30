@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-class HomeScreenPovider extends ChangeNotifier {
-  int selectedIndex = 0;
+class HomeScreenProvider extends ChangeNotifier {
+  int selectedIndex = 1;
   getIndexTab(index) {
     selectedIndex = index;
     notifyListeners();

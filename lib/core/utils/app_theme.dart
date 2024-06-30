@@ -5,6 +5,7 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: false,
     scaffoldBackgroundColor: AppColors.main,
+    primaryColor: AppColors.main,
     appBarTheme: AppBarTheme(
         backgroundColor: AppColors.appbarDark
     ),
@@ -38,6 +39,7 @@ class AppTheme {
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: false,
+    primaryColor: AppColors.main,
     scaffoldBackgroundColor: AppColors.main,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.appbarDark

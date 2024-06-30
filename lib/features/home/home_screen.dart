@@ -17,24 +17,24 @@ class HomeScreen extends StatelessWidget {
     HomeTab(),
     SearchTab(),
     BrowseTab(),
-    WatchlistTab(),
+    WatchListTab(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create: (BuildContext context) => HomeScreenPovider(),
+        create: (BuildContext context) => HomeScreenProvider(),
     builder: (context, child) {
-      var provider = Provider.of<HomeScreenPovider>(context);
+      var provider = Provider.of<HomeScreenProvider>(context);
       return Scaffold(
           bottomNavigationBar: BottomNavigationBar(
-              unselectedLabelStyle: TextStyle(color: Colors.white),
-              selectedLabelStyle: TextStyle(color: Color(0xffFFB224)),
-              selectedItemColor: Color(0xffFFB224),
+              unselectedLabelStyle: const TextStyle(color: Colors.white),
+              selectedLabelStyle: const TextStyle(color: Color(0xffFFB224)),
+              selectedItemColor: const Color(0xffFFB224),
               unselectedItemColor: Colors.white,
               elevation: 0,
               type: BottomNavigationBarType.fixed,
-              backgroundColor: Color(0xff1A1A1A),
+              backgroundColor: const Color(0xff1A1A1A),
               iconSize: 25,
               currentIndex: provider.selectedIndex,
               onTap: provider.getIndexTab,

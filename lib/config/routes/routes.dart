@@ -28,7 +28,7 @@ class AppRoutes {
       case RoutesName.searchTab:
         return MaterialPageRoute(builder: (context) => SearchTab());
       case RoutesName.watchListTab:
-        return MaterialPageRoute(builder: (context) => WatchlistTab());
+        return MaterialPageRoute(builder: (context) => WatchListTab());
       case RoutesName.browseTab:
         return MaterialPageRoute(builder: (context) => BrowseTab());
       // case RoutesName.detailsDiscover:
