@@ -1,13 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies/config/routes/routes.dart';
 import 'package:movies/core/api/api_manager.dart';
 import 'package:movies/core/utils/app_colors.dart';
 import 'package:movies/core/utils/app_strings.dart';
-import 'package:movies/core/widgets/movie_item_widget.dart';
-class ReleaseItem extends StatelessWidget {
-  const ReleaseItem({
+import 'package:movies/core/widgets/movie_select_widget.dart';
+
+class ReleaseWidget extends StatelessWidget {
+  const ReleaseWidget({
     super.key,
   });
 
@@ -15,6 +15,7 @@ class ReleaseItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.secondary,
+      height: 187.h,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -53,12 +54,18 @@ class ReleaseItem extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(context, AppRoutes.onGenerate(RouteSettings(name: RoutesName.detailsScreen, arguments: releaseResults[index].id)));
+                          Navigator.push(
+                              context,
+                              AppRoutes.onGenerate(RouteSettings(
+                                  name: RoutesName.detailsScreen,
+                                  arguments: releaseResults[index].id)));
                         },
                         child: SizedBox(
                           width: 96.87.w,
-                          child: MovieItemWidget(
-                            movieImage: releaseResults[index].backdropPath ?? "",
+                          child: MovieSelectItemWidget(
+                            movieImage:
+                                releaseResults[index].backdropPath ?? "",
+                            isSelected: true,
                           ),
                         ),
                       );

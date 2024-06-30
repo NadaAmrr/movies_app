@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'widgets/release_widget.dart';
 
-import 'widgets/release_item_widget.dart';
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
 
@@ -10,17 +10,18 @@ class HomeTab extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          /// Popular
           // PopularViewWidget(),
           SizedBox(
             height: 24.h,
           ),
           /// Release
-          const ReleaseItem(),
+          const ReleaseWidget(),
           SizedBox(
             height:24.h ,
           ),
-          // topRatedItem(),
-
+          /// Top Rated - Recommended
+          const ReleaseWidget(),
         ],
       ),
     );
